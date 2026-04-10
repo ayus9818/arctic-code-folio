@@ -62,7 +62,7 @@ export default function HeroSection() {
           <a href="https://www.linkedin.com/in/ayush-kc-386a82178/" target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
             <Linkedin size={20} />
           </a>
-          <a href="mailto:ayush@example.com" className="text-muted-foreground transition-colors hover:text-foreground">
+          <a href="mailto:ayush.kc002@gmail.com" className="text-muted-foreground transition-colors hover:text-foreground">
             <Mail size={20} />
           </a>
         </div>

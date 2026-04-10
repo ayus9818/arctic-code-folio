@@ -16,7 +16,7 @@ export default function ContactSection() {
 
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button asChild size="lg" className="gap-2">
-            <a href="mailto:ayush@example.com">
+            <a href="mailto:ayush.kc002@gmail.com">
               <Send size={16} />
               Send Email
             </a>
