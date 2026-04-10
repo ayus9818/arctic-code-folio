@@ -3,11 +3,21 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center px-6 pt-20">
-      {/* Subtle gradient bg */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--color-primary)/0.06,transparent_60%)]" />
+    <section className="relative flex min-h-screen items-center justify-center px-6 pt-20 overflow-hidden">
+      {/* AI/Tech background image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/hero-bg.jpg"
+          alt=""
+          className="h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        {/* Overlay to blend with theme */}
+        <div className="absolute inset-0 bg-background/80 dark:bg-background/70" />
+      </div>
 
-      <div className="mx-auto max-w-4xl text-center animate-fade-up">
+      <div className="relative mx-auto max-w-4xl text-center animate-fade-up">
         {/* Profile Photo */}
         <div className="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg">
           <img
