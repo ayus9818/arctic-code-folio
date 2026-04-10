@@ -8,6 +8,15 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--color-primary)/0.06,transparent_60%)]" />
 
       <div className="mx-auto max-w-4xl text-center animate-fade-up">
+        {/* Profile Photo */}
+        <div className="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg">
+          <img
+            src="/images/profile.png"
+            alt="Ayush K.C."
+            className="h-full w-full object-cover"
+          />
+        </div>
+
         <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">
           Hello, I'm
         </p>
@@ -37,10 +46,10 @@ export default function HeroSection() {
         </div>
 
         <div className="mt-8 flex items-center justify-center gap-4">
-          <a href="https://github.com/ayushkc" target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
+          <a href="https://github.com/ayus9818" target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
             <Github size={20} />
           </a>
-          <a href="https://linkedin.com/in/ayushkc" target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
+          <a href="https://www.linkedin.com/in/ayush-kc-386a82178/" target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
             <Linkedin size={20} />
           </a>
           <a href="mailto:ayush@example.com" className="text-muted-foreground transition-colors hover:text-foreground">
