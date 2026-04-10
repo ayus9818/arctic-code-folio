@@ -43,7 +43,7 @@ export default function AboutSection() {
               <Globe size={20} className="mt-0.5 shrink-0 text-primary" />
               <div>
                 <p className="font-medium text-foreground">Languages</p>
-                <p className="text-sm text-muted-foreground">English (fluent) · Norwegian (learning)</p>
+                <p className="text-sm text-muted-foreground">English (fluent) · Norwegian (fluent) · Nepali (fluent) · Hindi (fluent)</p>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Github, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {
@@ -22,13 +22,13 @@ export default function ContactSection() {
             </a>
           </Button>
           <Button variant="outline" size="lg" asChild className="gap-2">
-            <a href="https://github.com/ayushkc" target="_blank" rel="noreferrer">
+            <a href="https://github.com/ayus9818" target="_blank" rel="noreferrer">
               <Github size={16} />
               GitHub
             </a>
           </Button>
           <Button variant="outline" size="lg" asChild className="gap-2">
-            <a href="https://linkedin.com/in/ayushkc" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/ayush-kc-386a82178/" target="_blank" rel="noreferrer">
               <Linkedin size={16} />
               LinkedIn
             </a>

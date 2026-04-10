@@ -4,22 +4,22 @@ const categories = [
   {
     title: "Frontend",
     icon: Code,
-    skills: ["HTML", "CSS", "Tailwind CSS", "React", "Jetpack Compose"],
+    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Tailwind CSS", "Bootstrap", "Responsive Design", "UI/UX Design Basics", "REST API Integration"],
   },
   {
     title: "Backend",
     icon: Server,
-    skills: ["Node.js", "Express", "C#", ".NET", "PHP"],
+    skills: ["Node.js", "Express.js", "Python", "REST API Development", "Authentication (JWT)", "API Design", "MVC Architecture", "Server-side Logic", "Git & Version Control"],
   },
   {
     title: "Database",
     icon: Database,
-    skills: ["MySQL", "Room (Android)"],
+    skills: ["MongoDB", "Database Design", "CRUD Operations", "Firebase", "Data Modeling", "Query Optimization"],
   },
   {
     title: "AI / ML",
     icon: Brain,
-    skills: ["LLM Fine-tuning", "LoRA / Unsloth", "Dataset Cleaning", "JSONL SFT Prep"],
+    skills: ["LLMs", "NLP", "Fine-tuning (LoRA / Unsloth)", "Hugging Face", "Dataset Cleaning", "JSONL SFT Prep"],
   },
   {
     title: "Tools",

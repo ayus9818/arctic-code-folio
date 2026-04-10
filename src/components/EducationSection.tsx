@@ -7,6 +7,11 @@ const education = [
     status: "Ongoing · Final semester",
   },
   {
+    degree: "Bachelor (Hons) Computing",
+    school: "The British College (Leeds Beckett University), Kathmandu, Nepal",
+    status: "Completed",
+  },
+  {
     degree: "+12 Science",
     school: "Molihss Kumaripati Lalitpur, Nepal",
     status: "Completed",
