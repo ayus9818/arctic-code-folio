@@ -8,6 +8,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BackgroundBlobs from "@/components/BackgroundBlobs";
 
 export const Route = createFileRoute("/")({
   head: () => ({
