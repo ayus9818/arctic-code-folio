@@ -26,6 +26,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <BackgroundBlobs />
+      <Navbar />
       <HeroSection />
       <AboutSection />
       <SkillsSection />
