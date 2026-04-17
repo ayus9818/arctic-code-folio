@@ -18,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    if (saved === "dark") {
       document.documentElement.classList.add("dark");
       setDark(true);
     }
@@ -26,7 +26,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handler, { passive: true });
+    window.addEventListener("scroll", handler);
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
@@ -38,62 +38,33 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-xl font-bold tracking-tight text-foreground">
+    <header className={`fixed top-0 left-0 right-0 z-50 ${scrolled ? "bg-background/90 backdrop-blur border-b" : ""}`}>
+      <nav className="w-full flex items-center justify-between px-6 lg:px-16 xl:px-32 py-5">
+
+        <a href="#" className="text-2xl font-bold">
           Ayush<span className="text-primary">.dev</span>
         </a>
 
-        {/* Desktop */}
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden md:flex items-center gap-6">
           {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
+            <a key={l.href} href={l.href} className="text-base lg:text-lg text-muted-foreground hover:text-foreground">
               {l.label}
             </a>
           ))}
-          <Button variant="ghost" size="icon" onClick={toggleTheme} className="ml-2">
-            {dark ? <Sun size={18} /> : <Moon size={18} />}
+          <Button variant="ghost" size="icon" onClick={toggleTheme}>
+            {dark ? <Sun /> : <Moon />}
           </Button>
         </div>
 
-        {/* Mobile toggle */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="md:hidden flex items-center gap-2">
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
-            {dark ? <Sun size={18} /> : <Moon size={18} />}
+            {dark ? <Sun /> : <Moon />}
           </Button>
           <Button variant="ghost" size="icon" onClick={() => setOpen(!open)}>
-            {open ? <X size={20} /> : <Menu size={20} />}
+            {open ? <X /> : <Menu />}
           </Button>
         </div>
       </nav>
-
-      {/* Mobile menu */}
-      {open && (
-        <div className="border-b border-border bg-background/95 backdrop-blur-lg md:hidden animate-fade-in">
-          <div className="flex flex-col gap-1 px-6 pb-4">
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
     </header>
   );
 }

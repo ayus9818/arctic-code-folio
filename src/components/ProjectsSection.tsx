@@ -16,28 +16,28 @@ const projects = [
     icon: Smartphone,
     description: "Kotlin + Jetpack Compose app with timer, session logging, multi-screen navigation. MVVM architecture with state hoisting.",
     tech: ["Kotlin", "Jetpack Compose", "MVVM"],
-    github: "#",
+    github: "https://github.com/ayus9818/training-logs-app",
   },
   {
     title: "Bike Rental App",
     icon: Bike,
     description: "UI-based app with dynamic selections for user type, height, and bike type. Includes payment simulation.",
     tech: ["UI/UX", "Dynamic State"],
-    github: "#",
+    github: "https://github.com/ayus9818/renting-bicycle-app",
   },
   {
     title: "Blog Platform API",
     icon: Globe,
     description: "RESTful backend built with C#/.NET featuring CRUD operations and authentication.",
     tech: ["C#", ".NET", "REST API"],
-    github: "#",
+    github: "https://github.com/ayus9818/blog-platform-api",
   },
   {
     title: "Task Management API",
     icon: ClipboardList,
     description: "REST API for managing tasks with full CRUD operations. Backend-focused project.",
     tech: ["REST API", "Backend"],
-    github: "#",
+    github: "https://github.com/ayus9818/task-management-api",
   },
   {
     title: "Smart Surveillance System",
@@ -52,78 +52,115 @@ const projects = [
     icon: Cpu,
     description: "Hardware + programming integration project combining physical systems with code.",
     tech: ["Hardware", "Programming"],
-    github: "#",
+    github: "https://github.com/ayus9818/robot-arm-simulation",
   },
   {
     title: "Library Management System",
     icon: BookOpen,
     description: "Basic CRUD system for managing library resources.",
     tech: ["CRUD", "Full-Stack"],
-    github: "#",
+    github: "https://github.com/ayus9818/library-management-system",
+  },
+  {
+    title: "SeaStride Game",
+    icon: BookOpen,
+    description: "A mobile game project where real-world movement controls a virtual boat in a shared environment",
+    tech: ["KOTLIN", "JETPACK COMPOSE", "ANDROID SENSORS", "GPS AND MOTIONS BASED INTERACTIONS"],
+    github: "https://github.com/ayus9818/seastride-game",
   },
 ];
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+    <section id="projects" className="py-32 px-6">
+
+      {/* FULL WIDTH */}
+      <div className="w-full px-6 lg:px-16 xl:px-32">
+
+        {/* TITLE */}
+        <h2 className="text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
           Projects
         </h2>
-        <div className="mt-2 h-1 w-12 rounded-full bg-primary" />
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="mt-3 h-1 w-16 rounded-full bg-primary" />
+
+        {/* GRID */}
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
           {projects.map((p) => (
             <div
               key={p.title}
-              className={`group rounded-xl border bg-card p-6 hover-lift ${
-                p.featured ? "border-primary/30 sm:col-span-2" : "border-border"
+              className={`group rounded-2xl border bg-card p-8 hover-lift transition-all duration-300 ${
+                p.featured ? "border-primary/40 lg:col-span-2" : "border-border"
               }`}
             >
+
+              {/* FEATURED TAG */}
               {p.featured && (
-                <span className="mb-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
                   Featured
                 </span>
               )}
-              <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <p.icon size={20} />
+
+              <div className="flex items-start gap-4">
+
+                {/* ICON */}
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <p.icon size={24} />
                 </div>
+
+                {/* CONTENT */}
                 <div className="min-w-0 flex-1">
-                  <h3 className="font-semibold text-foreground">
+
+                  {/* TITLE */}
+                  <h3 className="text-xl lg:text-2xl font-semibold text-foreground">
                     {p.title}
                     {p.subtitle && (
-                      <span className="ml-2 text-xs font-normal text-muted-foreground">
+                      <span className="ml-2 text-sm font-normal text-muted-foreground">
                         {p.subtitle}
                       </span>
                     )}
                   </h3>
-                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+
+                  {/* DESCRIPTION */}
+                  <p className="mt-2 text-base lg:text-lg text-muted-foreground leading-relaxed">
                     {p.description}
                   </p>
-                  <div className="mt-3 flex flex-wrap gap-1.5">
+
+                  {/* TECH STACK */}
+                  <div className="mt-4 flex flex-wrap gap-2">
                     {p.tech.map((t) => (
                       <span
                         key={t}
-                        className="rounded-md bg-secondary px-2 py-0.5 text-[11px] font-medium text-secondary-foreground"
+                        className="rounded-full bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground"
                       >
                         {t}
                       </span>
                     ))}
                   </div>
-                  <div className="mt-4">
-                    <Button variant="ghost" size="sm" asChild className="gap-1.5 text-muted-foreground hover:text-foreground">
+
+                  {/* BUTTON */}
+                  <div className="mt-6">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      asChild
+                      className="gap-2 text-base text-muted-foreground hover:text-foreground"
+                    >
                       <a href={p.github} target="_blank" rel="noreferrer">
-                        <Github size={14} />
+                        <Github size={16} />
                         View on GitHub
-                        <ExternalLink size={12} />
+                        <ExternalLink size={14} />
                       </a>
                     </Button>
                   </div>
+
                 </div>
               </div>
+
             </div>
           ))}
+
         </div>
       </div>
     </section>
